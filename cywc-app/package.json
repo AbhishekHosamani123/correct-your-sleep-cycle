@@ -4,18 +4,21 @@
   "main": "index.ts",
   "dependencies": {
     "@react-native-async-storage/async-storage": "2.2.0",
-    "expo": "~57.0.0",
-    "expo-notifications": "~57.0.23",
-    "expo-status-bar": "~57.0.1",
+    "expo": "57.0.0",
+    "expo-notifications": "57.0.0",
+    "expo-status-bar": "57.0.0",
     "react": "19.2.3",
     "react-native": "0.86.3"
   },
   "devDependencies": {
     "@types/react": "~19.2.4",
+    "patch-package": "6.5.1",
+    "postinstall-postinstall": "2.1.0",
     "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",
+    "postinstall": "patch-package",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"

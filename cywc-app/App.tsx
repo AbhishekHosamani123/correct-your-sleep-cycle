@@ -41,7 +41,9 @@ export default function App() {
   useEffect(() => {
     if (!ready) return;
     void saveAlarms(alarms);
-    void rescheduleNotifications(alarms);
+    rescheduleNotifications(alarms).catch((e) =>
+      console.warn('[alarms] scheduling skipped:', e),
+    );
   }, [alarms, ready]);
 
   useEffect(() => {
